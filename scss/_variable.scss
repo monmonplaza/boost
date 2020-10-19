@@ -1,0 +1,39 @@
+$dark-color :#3B3B3C;
+$light-color :#fff;
+$primary-color :#F36C21;
+$primary-color-1 :#F7901E;
+$lightblue :#71CBE4;
+$highlight :#003463;
+
+$font-regular: 'boost_next_regular', segoe UI sans-serif;
+$font-thin: 'boost_next_thin', segoe UI sans-serif;
+$font-black : 'boost_next_black', segoe UI sans-serif;
+
+$sm-break : '425px';
+
+
+@font-face {
+    font-family: 'boost_next_regular';
+    src: url('../fonts/boostnext-regular-webfont.woff2') format('woff2'),
+         url('../fonts/boostnext-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'boost_next_thin';
+    src: url('../fonts/boostnext-thin-webfont.woff2') format('woff2'),
+         url('../fonts/boostnext-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'boost_next_black';
+    src: url('../fonts/boostnext-black-webfont.woff2') format('woff2'),
+         url('../fonts/boostnext-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

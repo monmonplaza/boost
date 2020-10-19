@@ -1,0 +1,736 @@
+.header {
+    background-color: $dark-color;
+    color:$light-color;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    
+    .location {
+        background-color: #646464;
+        padding: 1rem ;
+        p{
+            text-align: right;
+            margin: 0 1rem;
+ 
+        }
+    } 
+
+    &__main__wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+        @include responsive(800px){
+            flex-direction: column;
+         }
+         @include responsive(425px){
+            padding: 1.2rem;
+        }
+         .branding {
+            @include responsive(800px){
+                text-align: center;
+                margin-bottom: 2rem;
+             }
+         }
+        nav {
+            align-self: center;
+        } 
+        ul{
+            display: flex;
+            li {
+                
+                text-align: center;
+                a {
+                    color: $light-color;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    border-left: 1px solid $light-color;
+                    padding:0 2rem;
+                    font-weight: bold;
+               
+                }
+            }
+
+            li:first-child a {
+                border: none;
+            }
+            li:last-child a {
+                padding-right: 0;
+            }
+        }
+    }
+} 
+
+.no-webp .hero {
+    background: linear-gradient(
+        to right,
+        rgba($primary-color, .9) 10%, 
+        transparent), 
+        url('../images/bg_banner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 10rem;
+        min-height: 82vh;
+        position: relative;
+        padding-top: 5rem;
+}
+  
+.webp .hero{
+      background: linear-gradient(
+        to right,
+        rgba($primary-color, .9) 10%, 
+        transparent), 
+        url('../images/bg_banner.webp');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 10rem;
+        min-height: 82vh;
+        position: relative;
+        padding-top: 5rem;
+}
+
+.hero {
+    &__content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-40%);
+        background-color: $light-color;
+        max-width: 30rem;    
+        padding: 7rem 5rem; 
+        @include responsive(1150px){
+           left: 2rem;
+        }
+        h1 {
+            @include header($primary-color-1); 
+        }
+
+        ul  {
+            margin-bottom: 5rem;
+            li {
+                margin-bottom: 2rem;
+                display: flex;
+                align-self: center;
+                img {
+                    padding-right: 2rem;
+                }
+            }
+        }
+
+        a {
+            @include btn($lightblue);
+        }
+    }
+}
+
+.covid {
+    padding: 3rem;
+    text-align: center;
+    background-color: $primary-color-1;
+    color: $light-color;
+    h2 {
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 2rem;
+    }
+}
+
+.no-webp .shrink {
+    background: linear-gradient(
+        rgba(0,0,0,0.6), 
+        rgba(0,0,0,0.6)), 
+        url('../images/bg_plans.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 5rem 0 5rem 0;
+}
+
+.webp .shrink {
+    background: linear-gradient(
+        rgba(0,0,0,0.6), 
+        rgba(0,0,0,0.6)), 
+        url('../images/bg_plans.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        padding: 5rem 0 5rem 0;
+}
+
+.shrink {
+ 
+    &__wrapper {
+        max-width: 110rem;
+        margin: 5rem auto;
+        display: flex;
+        color: $light-color;
+        @include responsive(800px) {
+            flex-direction: column;
+        }
+    }
+    &__left {
+        flex: 0 0 50%;
+        padding-top: 5rem;
+        @include responsive(800px) {
+            padding: 5rem 2rem;
+        }
+        h2 {
+            max-width: 37rem;
+        }
+        h3 {
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+
+        li {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            img {
+                padding-right: 2rem;
+            }
+        }
+
+    }
+
+    &__right {
+        background-color: $primary-color-1;
+        padding: 7rem 5rem;
+        @include responsive(800px) {
+            margin: 0 1rem;
+        }
+        h2 {
+            font-family: $font-black;
+            text-align: center;
+            font-size: 6rem;
+            line-height: 1;
+            margin-bottom: 1rem;
+            span {
+                font-family: $font-regular;
+                display: block;
+                font-size: 4rem;
+                text-transform: uppercase;
+            }
+      
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .price {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            &-wrong {
+                padding: 0 .5rem;
+                font-size: 3.4rem;
+                position: relative;
+                &::after {
+                    content:'';
+                    height: 4px;
+                    width: 9rem;
+                    background-color: $highlight;
+                    z-index: 3;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform-origin: center;
+                    transform:translate(-50%,-50%) rotate(-35deg);
+                }
+                span {
+                    font-size: 5.6rem;   
+                }
+            }
+
+            &-right {
+               @include price($highlight);
+            }
+        }
+
+        .per-month {
+           @include per_month($light-color)
+        }
+
+        .list {
+            li {
+                margin-bottom: 2rem;
+            }
+        }
+
+        a {
+            text-align: center;
+            display: block;
+            text-decoration: none;
+        }
+    }
+}
+
+.unlimited {
+    padding: 10rem 0;
+    &__wrap {
+        display: flex;
+        // flex-wrap: wrap;
+        @include responsive(1120px) {
+            flex-direction: column;
+        }
+        
+    }
+
+    &__item{
+        padding: 0 2rem;
+        @include responsive(1120px) {
+           picture {
+               text-align: center;
+               display: block;
+           }
+        margin-bottom: 3rem;
+        }
+        h2 {
+            margin-bottom: 0;
+            color: $primary-color;
+        }
+        p.text-subheader {
+            margin-bottom: 2rem;
+            color: $primary-color-1;
+        }
+    }
+    &__plans {
+        display: flex;
+        margin-top: 1rem;
+        &__box {
+            padding : 3rem 2rem;
+            flex: 1 1 50%;
+            border: .5rem solid $primary-color;
+            margin-right: 2rem;
+            .price {
+                display: flex;
+                justify-content: center;
+                h3{
+                    @include price($primary-color-1);
+                }
+                ul {
+                    align-self: center;
+                    
+                    li {
+                        font-size:1.6rem;
+                        color: $primary-color;
+                        margin: 1rem 0;
+                    }
+                    li:first-child{
+                        font-weight: bold;
+                    }
+                }
+            } 
+            .per-month{
+                @include per-month(#C5C5C7);
+                margin-bottom: 1rem;
+            }
+            .unlimited__list {
+                max-width: 22rem;
+                margin: 0 auto;
+                li {
+                    margin-bottom: 1rem;
+                    img {
+                        padding-right: 1rem;
+                    }
+                }
+                li:last-child{
+                    font-weight: bold;
+                }
+            }
+
+        }
+    }
+
+    .width-3 {
+        flex: 1 1 30%;
+    }
+
+    .width-7 {
+        flex: 1 1 70%;
+    }
+        
+}
+
+.deals {
+    text-align: center;
+    background-color: $primary-color;
+    padding:8rem 0;
+    color: $light-color;
+    h2 {
+        font-size: 6rem;
+        font-family: $font-black;
+        margin-bottom: 3rem;
+    }
+
+    p {
+        font-size: 2rem;
+        max-width: 52rem;
+        margin: 0 auto;
+     }
+}
+
+.promo {
+    padding: 8rem 0;
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem ;
+        @include responsive(800px) {
+            flex-direction: column;
+            text-align: center;
+        }
+       
+        img {
+            @include responsive(1150px){
+                width: 80%;
+            }
+        }
+
+
+
+        
+    }
+}
+
+.no-webp .store {
+    background: linear-gradient(
+        rgba(0,0,0,.7),
+        rgba(0,0,0,.7),
+    ), url('../images/bg_storeinfo.jpg');
+    background-size: cover;
+
+color: $light-color;
+}
+
+.webp .store {
+    background: linear-gradient(
+            rgba(0,0,0,.7),
+            rgba(0,0,0,.7),
+        ), url('../images/bg_storeinfo.webp');
+    background-size: cover;
+    padding: 10rem;
+    color: $light-color;
+}
+
+.store {
+  
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 110rem;
+        @include responsive(1120px) {
+           flex-direction: column;
+        }
+    }
+    &__info {
+      
+        @include responsive(1120px) {
+            margin-bottom: 3rem;
+        }
+        h2 {
+            color: $light-color;
+            margin-bottom: 2rem;
+        }
+        .list {
+            margin-bottom: 2rem;
+            li {
+                margin-bottom: .5rem;
+            }
+            li:first-child{
+                color: $primary-color-1;
+                font-size: 2.2rem;
+                font-weight: bold;
+            }
+        }
+
+        .hours li{
+            display: flex;
+            justify-content: space-between;
+            max-width: 34rem;
+        }
+    }
+}
+
+footer {
+    padding: 2.7rem 0;
+    text-align: center;
+    color: $light-color;
+    border-top: $primary-color 1rem solid;
+    background-color: $dark-color;
+}
+
+//MOBILE ONLY ELEMENTS
+.hero_sm {
+    &_box {
+        
+        ul li {
+
+            display: flex;
+            margin-bottom: 2rem;
+            align-items: center;
+            img {
+                padding-right: 1rem;
+            }
+        }
+    }
+    .box-1  h1{
+        padding: 17rem  4.5rem 4.5rem;
+        box-shadow:inset  0 -10px 20px -10px rgba(0,0,0,.4);
+        font-size: 3.5rem;
+        font-family: $font-black;
+        color:$light-color;
+        line-height: 1.4;
+        background-color: $primary-color;
+        text-align: center;
+    }
+
+    .box-2 {
+        background-color: #EF7900;
+        color: $light-color;
+        padding:2rem  3.4rem; 
+        font-size: 1.7rem;
+        box-shadow:inset  0 -10px 20px -10px rgba(0,0,0,.4);
+    }
+
+    .box-3 {
+        position: relative;
+        img {
+            width: 100%;
+        }
+        .content {
+            background: $primary-color-1;
+            position: absolute;
+            width: 31rem;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 2.5rem;
+            text-align: center;
+            bottom: 3rem;
+           
+            h2 {
+                color: $highlight;
+                font-family: $font-black;
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 1.4rem;
+                color: $light-color;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 425px ) {
+    .header {
+        .branding {
+            display: none
+        }
+        .location {
+            background-color: $dark-color;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid $light-color;
+            .flex-sm {
+                display: flex;
+                align-items: center;
+            }
+            .address {
+                text-align: left;
+                margin-left: 4rem;
+                span {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .call__boost {
+        position: fixed;
+        bottom: 6rem; 
+        @include btn($lightblue);
+        // left: 20%;
+        // transform: translateX(-10%);
+        z-index: 9;
+        font-size: 2rem;
+        width: 77%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+       
+        left: 50%;
+        margin-left: -47%;
+    }
+
+    .shrink {
+        background: transparent;
+        margin-top: -10rem;
+        margin-bottom: 0;
+        padding-bottom: 0!important;
+        .no-webp &__left {
+            padding: 4rem 7rem;
+            background:linear-gradient(
+                rgba(0,0,0,.5),
+                rgba(0,0,0,0.5)),
+                url('../images/bg_plans_sm.jpg');
+            background-size: cover;
+        }
+
+        .webp &__left {
+            padding: 4rem 7rem;
+            background:linear-gradient(
+                rgba(0,0,0,.5),
+                rgba(0,0,0,0.5)),
+                url('../images/bg_plans_sm.webp');
+            background-size: cover;
+        }
+        &__left {
+            h2 {
+                font-size: 3rem;
+            }
+            h3 {
+                color:$primary-color-1;
+                font-size: 2.4rem;
+            }
+        }
+        &__right {
+            margin: 0;
+            .list {
+                width: 21rem;
+                font-size: 1.4rem;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .unlimited {
+        padding: 0;
+        margin-top: -5rem;
+       
+        &__item {
+            background-color: #F0F0F0;
+            padding: 0;
+            margin-bottom: 0;
+            picture img {
+                width: 100%;
+            }
+
+            h2 {
+                padding-top: 4rem;
+                text-align: center;
+                text-transform: uppercase;
+              
+            }
+
+            p.text-subheader {
+                text-align: center;
+                padding: 1rem 8rem;
+                color: $dark-color;
+            }
+            
+        }
+
+        &__plans {
+            flex-direction: column;
+            &__box {
+                margin: 0;
+                margin-bottom: 1rem;
+                border: solid #C5C5C7  8px;
+                background-color: $light-color;
+            }
+            &__box:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .no-webp .deals {
+        background-image: linear-gradient(rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url('../images/bg_jump_sm.jpg');
+    }
+
+    .webp .deals {
+        background-image: linear-gradient(rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)),
+        url('../images/bg_jump_sm.webp');
+    }
+
+    .deals {
+        background-size: cover;
+        padding: 8rem 2rem;
+        h2 {
+            margin-top: 5rem;
+            font-size: 3rem;
+           margin: .5rem;
+           padding-top: 5rem;
+        }
+        p {
+            font-size: 1.4rem;
+            padding: 0 6rem;
+        }
+    }
+
+    .promo {
+        padding: 0;
+        overflow: hidden;
+        &__wrap {
+            padding: 0;
+            width: 100%;
+        }
+        
+        img {
+            border-top: solid $dark-color  8px;
+            border-left: solid $dark-color  8px;
+            border-right: solid $dark-color  8px;
+            width: 96%;
+        }
+        picture:last-child {
+            
+                border-bottom: solid $dark-color  8px;
+       }
+    }
+
+    .store {
+        padding: 0!important;
+        background: transparent;
+        
+        &__info {
+            padding:5.5rem ;
+            background: linear-gradient(
+                rgba(0,0,0,.7),
+                rgba(0,0,0,.7),
+            ), url('../images/bg_storeinfo_sm.jpg');
+            margin-bottom: 0;
+            background-size: cover;
+        }
+        .hours {
+            max-width: 18rem;
+        }
+
+        &__map {
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+}

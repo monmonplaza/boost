@@ -1,0 +1,58 @@
+// * {
+//     border: 1px solid red!important;
+// }
+  
+html {
+    font-size: 62.5%;
+    @include responsive($sm-break){
+        font-size: 60%;
+    }
+
+    @include responsive(370px){
+        font-size: 55%;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $font-regular;
+    color: $dark-color;
+    line-height: 1.2;
+}
+
+.sm-only {
+    display: none;
+    @include responsive($sm-break){
+        display: block;
+    }
+}
+
+.lg-only {
+    display: block;
+    @include responsive($sm-break){
+        display: none;
+    }
+}
+
+.container {
+    max-width: 132rem;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.highlight {
+    color: $highlight;
+    font-family: $font-black;;
+}
+
+
+.text-header {
+    font-size: 4rem;
+    font-family: $font-black;
+    margin-bottom: 1rem;
+}
+
+.bg-primary {
+    background-color: $primary-color;
+}
