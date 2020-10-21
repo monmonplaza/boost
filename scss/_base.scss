@@ -5,8 +5,8 @@
 html {
     font-size: 62.5%;
 
-    @include responsive(414px){
-        font-size: 55%;
+    @include responsive($sm-break){
+        font-size: 60%;
     }
 
     @include responsive(370px){
