@@ -23,14 +23,14 @@ body {
 
 .sm-only {
     display: none;
-    @include responsive($sm-break){
+    @include responsive(414px){
         display: block;
     }
 }
 
 .lg-only {
     display: block;
-    @include responsive($sm-break){
+    @include responsive(414px){
         display: none;
     }
 }
