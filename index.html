@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boost Mobile</title>
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PKFW96R');</script>
+        <!-- End Google Tag Manager -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://images.overthetop.com/js/ott.css">
     <link rel="preload" href="./fonts/boostnext-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/boostnext-regular-webfont.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="./fonts/boostnext-black-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/boostnext-black-webfont.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="./fonts/boostnext-bold-webfont.woff" as="font" type="font/woff" crossorigin>
 </head>
 <body>
     <header class="header">
@@ -20,7 +29,7 @@
                             <source srcset="./images/logo_sm.webp" media="(max-width:414px)"> 
                             <img class="lazyload" data-src="./images/logo_sm.png" media="(max-width:414px)"> 
                         </picture>
-                        <p class="address">1234 Main St. St #A Anytown, <span>CA 92399</span></p>
+                        <p class="address"> [!Client.FullAddress!] <span> [!Client.City!], [!Client.State!] [!Client.Zipcode!]</span></p>
                     </div>
                 </div>
             </div>
@@ -37,7 +46,7 @@
                     </div>
                     <nav>
                         <ul>
-                            <li><a href="#phone"  class="scroll">Phones</a></li>
+                            <li><a href="#deals"  class="scroll">Phones</a></li>
                             <li><a href="#plans" class="scroll">Plans</a></li>
                             <li><a href="#storeinfo" class="scroll">Store Info</a></li>
                         </ul>
@@ -58,7 +67,7 @@
                     <li><img class="lazyload" data-src="./images/check_orange.png" alt="check icon"><img class="lazyload" data-src="./images/check_white.png" alt="check icon" class="sm-only">Affordable In-Store Accessories</li>
                     <li><img class="lazyload" data-src="./images/check_orange.png" alt="check icon"><img class="lazyload" data-src="./images/check_white.png" alt="check icon" class="sm-only"><span class="highlight">Pick Up In-Store Today</span></li>
                 </ul>
-                <a href="#" class="btn call__boost">Call your Boost expert</a>
+                <a href="tel:[!Client.Phone!]" class="btn call__boost">Call your Boost expert</a>
             </div>
         </div>
     </section>
@@ -228,7 +237,7 @@
         </div>
     </section>
 
-    <section class="deals">
+    <section class="deals" id="deals">
         <h2>Jump on These <br>
             Hot Deals </h2>
         <p>We redefine the future of wireless retail by offering the largest selection of top 
@@ -264,42 +273,70 @@
 
                     <ul class="list">
                         <li>Address</li>
-                        <li>1234 Main St. St #A</li>
-                        <li>Anytown, CA 92399</li>
+                        <li>[!Client.FullAddress!]</li>
+                        <li>[!Client.City!], [!Client.State!] [!Client.Zipcode!]</li>
                     </ul>
 
                     <ul class="list">
                         <li>Phone</li>
-                        <li>(555) 867-5309</li>
+                        <li>[!Client.Phone!]</li>
                     </ul>
 
                     <ul class="list hours">
                         <li>Hours</li>
-                        <li><span>Mon </span> <span>10:00 AM - 7:00 PM</span></li>
-                        <li><span>Tues</span>  <span>10:00 AM - 7:00 PM</span></li>
-                        <li><span>Wed </span> <span>10:00 AM - 7:00 PM</span></li>
-                        <li><span>Thur</span>  <span>10:00 AM - 7:00 PM</span></li>
-                        <li><span>Fri </span> <span>10:00 AM - 7:00 PM</span></li>
-                        <li><span>Sat </span> <span>10:00 AM - 7:00 PM</span></li>
-                        <li><span>Sun </span> <span>10:00 AM - 7:00 PM</span></li>
+                        [!Client.CompanyHours!]
+
 
                     </ul>
                 </div>
 
                 <div class="store__map">
-                    <iframe data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2123.323719621708!2d-118.26233847348722!3d34.03643352912012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c7ceeb24d2c1%3A0x73eca4f8c04a2e8f!2s1234%20S%20Main%20St%20A%2C%20Los%20Angeles%2C%20CA%2090015%2C%20USA!5e0!3m2!1sen!2sph!4v1602901042652!5m2!1sen!2sph" width="520" height="450" frameborder="0" style="border:0; display:block" allowfullscreen="" aria-hidden="false" tabindex="0" class="lazyload"></iframe>
+                    <iframe data-src="[!Content.EmbedMapLink!]" width="520" height="450" frameborder="0" style="border:0; display:block" allowfullscreen="" aria-hidden="false" tabindex="0" class="lazyload"></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>Boost Mobile - All Rights Reserved - Privacy Policy</p>
+        <p>Boost Mobile - All Rights Reserved</p>
     </footer>
-
-
-
     
+    <section class="legal">
+        <div class="container">
+            <div class="legal__wrapper">
+<h6>Free LG Stylo 6<br>Select plans only. Valid through 11/16/20.</h6>
+
+<p>While supplies last. Excl. tax. New customers only; req. eligible port & activation on eligible plans; excl. ports from Sprint-related carriers. Sel. markets/retailers only (excl. boostmobile.com or national retailers). Sel. models only; no substitutions, cash back, credit or rain checks. May not be combinable with other device offers.</p>
+ 
+<h6>2X Data Offer</h6>
+<p>Valid Through 11/16/20. Double Data: Bring your own device customers on the $10 and $15 plans will receive double data for their first 3 mos. of service. After 3 mos., they will return to the regular allotment. Data Plans: Data access ends after allotted data usage. Includes 50 domestic voice roaming minutes (sel. devices). Int’l. svcs. extra. Not all plans can be combined with other offers. Payments: Total plan price includes services, taxes & fees. Pymt. due on monthly pymt. date or acct. will be suspended. Sufficient funds must be added within 120 days of suspension or acct. will expire & acct. balance will be forfeited. BYOD: Avail. for select devices for activation on the Boost Mobile network. Requires Boost Mobile service plan. Unlimited services are on-network only. By purchasing, installing or activating card, you agree to abide by Boost Mobile’s terms & conditions. Network experience may vary & other services/features, including MMS & some pre-installed applications, may not function or be avail. with Boost Mobile service. Phones must be compatible and unlocked domestically by your current carrier before switching. Lost/stolen phones not accepted.</p>
+<h6>iPhone 7 $49.99<br>Select plans only. Valid Through 11/16/20.</h6>
+
+<p>While supplies last. Excl. tax. Limit 1 device/line. Avail. for new customers only. Req. port-in & activation on eligible plans $50 or higher & unlimited family plans; excl. ports from Sprint-related carriers. In sel. markets (excl. boostmobile.com or national retailers). Discount applied toward phone purchase; no cash back, credit or rain checks. Sel. models only, no substitutions. Selection & availability vary by retailer.</p>
+
+<h6>Shrink-It! Plan</h6>
+<p>After 3 on-time payments, the plan will be discounted to $40/mo. Then after 3 additional on-time payments, the plan will be discounted to $35/mo. On-time payments do not need to be consecutive. Maximum discount of $10/mo. Discount will continue unless service is interrupted or plan is changed. Cannot be combined with other offers.  Includes 50 domestic voice roaming minutes (sel. devices). Int’l. svcs. extra. After 15GB of data during a billing cycle, speeds will be reduced to 2G. Mobile Hotspot, VPN & P2P Limits: Plan includes Mobile Hotspot. Usage draws from 15GB high-speed data then reduced to 2G speeds. See boostmobile.com/networkmanagement for details.  Payments: Total plan price includes services, taxes & fees. Pymt. due on monthly pymt. date or acct. will be suspended. Sufficient funds must be added within 120 days of suspension or acct. will expire & acct. balance will be forfeited.</p>
+
+<h6>Coolpad Legacy $39.99<br>Select plans only. Valid Through 11/16/20.</h6>
+
+<p>While supplies last. Excl. tax. New customers only; req. activation on eligible plans $50 or higher & unlimited family plans; excl. ports from Sprint-related carriers. Sel. markets/retailers only (excl. boostmobile.com or national retailers). Sel. models only; no substitutions, cash back, credit or rain checks. May not be combinable with other device oﬀers.</p>
+
+<h6>Take Home Big Savings<br>Valid Through 11/16/20.</h6>
+
+<p>While supplies last. Limit 1 device/line; req. eligible port & activation on eligible plans; excl. ports from Sprint-related carriers. Excl. tax. Sel. markets/retailers only (excl. boostmobile.com or national retailers). Sel. models only; no substitutions, cash back or rain checks. May not be combinable with other device offers.</p>
+
+<p><span>Other terms:</span> Offers/coverage not avail. everywhere or for all phones/networks. Boost reserves the right to change or cancel offer at any time. Prohibited network use rules & other restrictions apply. See participating dealer for details. ©2020 DISH Wireless L.L.C. All rights reserved. Samsung and Galaxy are both registered trademarks of Samsung Electronics Co., Ltd. Apple and iPhone are registered trademarks of Apple, Inc. LG and the LG logo are registered trademarks of LG Corp. MOTOROLA, Stylized M Logo, MOTO and the MOTO family of marks are trademarks of Motorola Trademark Holdings, LLC.  . COOLPAD is a registered trademark of Coolpad Technologies, Inc. All other marks are the property of their respective owners.</p>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+    <script src="https://images.overthetop.com/js/ott.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
     <script src="./js/app.js"></script>
