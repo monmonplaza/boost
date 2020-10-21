@@ -8,6 +8,7 @@ $highlight :#003463;
 $font-regular: 'boost_next_regular', segoe UI sans-serif;
 $font-thin: 'boost_next_thin', segoe UI sans-serif;
 $font-black : 'boost_next_black', segoe UI sans-serif;
+$font-bold : 'boost_next_bold', segoe UI sans-serif;
 
 $sm-break : '425px';
 
@@ -33,6 +34,14 @@ $sm-break : '425px';
     font-family: 'boost_next_black';
     src: url('../fonts/boostnext-black-webfont.woff2') format('woff2'),
          url('../fonts/boostnext-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'boost_next_bold';
+    src: url('../fonts/boostnext-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
